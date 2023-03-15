@@ -1,0 +1,6 @@
+.container {
+    border: solid violet 2px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}

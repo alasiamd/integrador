@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    background-color: rgb(255,230,67);
+    font-family: cursive;
+}
+
+button {
+    color: black;
+    background-color: rgb(255,230,67);
+}
+
+button:hover {
+    color: rgb(255,230,67);
+    background-color: black;
+    cursor: pointer;
+}

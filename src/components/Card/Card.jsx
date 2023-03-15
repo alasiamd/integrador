@@ -1,35 +1,26 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
-const DivCard = styled.div`
-background-color: white;
-   border: solid cornsilk;
-   width:15em;
-   height: 17em;
-   border-radius: 1em;
-`;
-const Button = styled.button`
-   display: flex;
-   margin-left: 16em;
+import styles from "./Card.module.css";
 
-`;
-
-const Image = styled.img`
-   width:100%;
-   height: 13em;
-   border-radius: 1em;
-   position: initial;
-`
-
+// const Button = styled.button`
+ 
 export default function Card(props) {
    return (
-      <DivCard>
-         <Button onClick={() => props.onClose()}>X</Button>
-         <Image  src={props.image} alt="" />
-         <h2>{props.name} </h2>
-         <h2>{props.species}</h2>
-         <h2>{props.gender}</h2>
+      <div className={styles.container}>
+         <div className={styles.divButton}>
+            <button onClick={() => props.onClose()}>X</button>
+         </div>
+         <div className={styles.divImg}>
+            <img  src={props.image} alt="" />
+            <h2 className={styles.name} >{props.name} </h2>
+         </div>
+         <div className={styles.divGS}>
+         <h2 className={styles.gs}>{props.species}</h2>
+         <h2 className={styles.gs}>{props.gender}</h2>
+         </div>
          
-      </DivCard>
+         
+      </div>
    );
 }
