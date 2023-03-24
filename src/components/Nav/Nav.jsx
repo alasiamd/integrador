@@ -11,6 +11,10 @@ export default function Nav(props) {
                 className={({ isActive }) => (isActive ? styles.active : styles.disable)}>
                     Inicio
             </NavLink>
+            <NavLink to="/favorites" 
+                className={({ isActive }) => (isActive ? styles.active : styles.disable)}>
+                    Favorites
+            </NavLink>
             <NavLink to="/about" 
                 className={({ isActive }) => (isActive ? styles.active : styles.disable)}>
                     Acerca de Mi

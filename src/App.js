@@ -6,6 +6,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import About from './components/About/About'
 import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
+import Favorites from './components/Favorites/Favorites'
 
 
 function App () {
@@ -50,6 +51,9 @@ function App () {
       <Routes>
         <Route path='/' element={<Form login={login} />}></Route>
         <Route path="/home" element={<Cards
+          characters={characters} onClose={onClose}
+        /> }/>
+        <Route path="/favorites" element={<Favorites
           characters={characters} onClose={onClose}
         /> }/>
         <Route path="/about" element={<About />}/>
