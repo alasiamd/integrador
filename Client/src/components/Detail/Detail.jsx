@@ -9,7 +9,7 @@ export default function Detail(props) {
     const regresar = useNavigate();
     
     useEffect(()=>{
-        fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+        fetch(`http://localhost:3001/rickandmorty/character/${detailId}`)
         .then((response)=>response.json())
         .then((data)=> {
             data.name ? setCharacter(data) : alert("No se encontro el personaje")

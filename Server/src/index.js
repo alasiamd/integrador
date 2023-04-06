@@ -5,6 +5,7 @@ const server = http.createServer((req, res) =>{
     res.setHeader('Access-Control-Allow-Origin', '*');
 
     try {
+        const { url } = req;
         if (req.url.includes("/rickandmorty/character")) {
             const id = url.split("/").pop();
             const character = data.find((char) => char.id == id);            
